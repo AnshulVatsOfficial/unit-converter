@@ -1,66 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import LengthConverterPage from "./converters/length/page";
 
 export default function Home() {
+  const converters = [
+    { title: "Length", children: <LengthConverterPage /> },
+    { title: "Area", children: <LengthConverterPage /> },
+    { title: "Temperature", children: <LengthConverterPage /> },
+    { title: "Weight", children: <LengthConverterPage /> },
+    { title: "Time", children: <LengthConverterPage /> },
+    { title: "Volume", children: <LengthConverterPage /> },
+  ];
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Tabs
+      className="size-full flex flex-col items-center pt-2"
+      defaultValue={converters[0].title}
+    >
+      <TabsList className="w-full flex justify-start gap-x-2 overflow-x-auto overflow-y-hidden max-w-[60rem] px-6 bg-transparent">
+        {converters.map(({ title }, index: number) => {
+          return (
+            <TabsTrigger key={`${title}-${index}`} value={title}>
+              {title}
+            </TabsTrigger>
+          );
+        })}
+      </TabsList>
+      {converters.map(({ title, children }, index: number) => {
+        return (
+          <TabsContent
+            key={`${title}-${index}`}
+            className="size-full overflow-auto"
+            value={title}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            {children}
+          </TabsContent>
+        );
+      })}
+    </Tabs>
   );
 }
