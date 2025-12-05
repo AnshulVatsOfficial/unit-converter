@@ -4,20 +4,20 @@ import { useState, useMemo } from "react";
 import { ArrowRightLeft, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { UnitInput } from "@/components/common/UnitInput";
-import { LengthUnitSelector } from "@/components/converters/length/LengthUnitSelector";
-import { LengthResultsList } from "@/components/converters/length/LengthResultsList";
 import {
-  lengthUnits,
-  convertToAllUnits,
+  areaUnits,
+  convertToAllAreaUnits,
   formatNumber,
-} from "@/conversions/length/length";
-import { LengthUnit } from "@/types/length/length";
+} from "@/conversions/area/area";
 import { toast } from "sonner";
+import { AreaUnit } from "@/types/area/area";
+import { AreaUnitSelector } from "./AreaUnitSelector";
+import { AreaResultsList } from "./AreaResultsList";
 
-export function LengthConverter() {
+export function AreaConverter() {
   const [inputValue, setInputValue] = useState<string>("1");
-  const [fromUnit, setFromUnit] = useState<LengthUnit>(lengthUnits[0]); // Meter
-  const [toUnit, setToUnit] = useState<LengthUnit>(lengthUnits[2]); // Centimeter
+  const [fromUnit, setFromUnit] = useState<AreaUnit>(areaUnits[0]); // Square Meter
+  const [toUnit, setToUnit] = useState<AreaUnit>(areaUnits[1]); // Square Kilometer
   const [copied, setCopied] = useState(false);
 
   const numericValue = useMemo(() => {
@@ -26,7 +26,7 @@ export function LengthConverter() {
   }, [inputValue]);
 
   const allResults = useMemo(() => {
-    return convertToAllUnits(numericValue, fromUnit);
+    return convertToAllAreaUnits(numericValue, fromUnit);
   }, [numericValue, fromUnit]);
 
   const primaryResult = useMemo(() => {
@@ -52,11 +52,11 @@ export function LengthConverter() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleFromUnitSelect = (unit: LengthUnit) => {
+  const handleFromUnitSelect = (unit: AreaUnit) => {
     setFromUnit(unit);
   };
 
-  const handleToUnitSelect = (unit: LengthUnit) => {
+  const handleToUnitSelect = (unit: AreaUnit) => {
     setToUnit(unit);
   };
 
@@ -127,13 +127,13 @@ export function LengthConverter() {
 
       {/* Unit selectors */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <LengthUnitSelector
-          units={lengthUnits}
+        <AreaUnitSelector
+          units={areaUnits}
           selectedUnit={fromUnit}
           onSelect={handleFromUnitSelect}
           label="Select source unit"
         />
-        <LengthResultsList
+        <AreaResultsList
           results={allResults}
           selectedUnit={toUnit}
           onSelect={handleToUnitSelect}
