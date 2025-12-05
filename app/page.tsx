@@ -1,10 +1,11 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import LengthConverterPage from "./converters/length/page";
+import AreaConverterPage from "./converters/area/page";
 
 export default function Home() {
   const converters = [
     { title: "Length", children: <LengthConverterPage /> },
-    { title: "Area", children: <LengthConverterPage /> },
+    { title: "Area", children: <AreaConverterPage /> },
     { title: "Temperature", children: <LengthConverterPage /> },
     { title: "Weight", children: <LengthConverterPage /> },
     { title: "Time", children: <LengthConverterPage /> },

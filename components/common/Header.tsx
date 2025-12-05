@@ -1,6 +1,6 @@
 "use client";
 
-import { Ruler, Calculator } from "lucide-react";
+import { Calculator } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export function Header() {
@@ -19,18 +19,7 @@ export function Header() {
         <span className="font-semibold text-lg tracking-tight">
           Unit<span className="text-primary">Convert</span>
         </span>
-      </div>{" "}
-      <nav className="hidden md:flex items-center gap-1">
-        <div
-          role="button"
-          onClick={() => push("/length")}
-          className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors flex items-center gap-2"
-        >
-          <Ruler className="h-4 w-4" />
-          Length
-        </div>
-        {/* More converter links will be added here */}
-      </nav>
+      </div>
     </header>
   );
 }
