@@ -1,42 +1,178 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 
-@media (prefers-color-scheme: dark) {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 210 20% 98%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 187 72% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 25% 20%;
+
+    --muted: 210 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 187 60% 95%;
+    --accent-foreground: 187 72% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 92%;
+    --ring: 187 72% 38%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --converter-bg: 210 25% 97%;
+    --unit-selected: 187 72% 38%;
+    --unit-hover: 187 60% 95%;
+    --value-text: 220 25% 15%;
+    --number-font: "JetBrains Mono", monospace;
+    --heading-font: "Plus Jakarta Sans", sans-serif;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 25% 10% / 0.03);
+    --shadow-md: 0 4px 6px -1px hsl(220 25% 10% / 0.05),
+      0 2px 4px -2px hsl(220 25% 10% / 0.03);
+    --shadow-lg: 0 10px 15px -3px hsl(220 25% 10% / 0.05),
+      0 4px 6px -4px hsl(220 25% 10% / 0.03);
+    --shadow-card: 0 1px 3px hsl(220 25% 10% / 0.04),
+      0 4px 12px hsl(220 25% 10% / 0.06);
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 187 65% 45%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 187 40% 20%;
+    --accent-foreground: 187 65% 70%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 18%;
+    --ring: 187 65% 45%;
+
+    --converter-bg: 220 25% 10%;
+    --unit-selected: 187 65% 45%;
+    --unit-hover: 187 40% 20%;
+    --value-text: 210 20% 95%;
+    --shadow-card: 0 1px 3px hsl(0 0% 0% / 0.2), 0 4px 12px hsl(0 0% 0% / 0.3);
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--heading-font);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--heading-font);
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .number-display {
+    font-family: var(--number-font);
+  }
+
+  .unit-list-item {
+    @apply px-4 py-3 cursor-pointer transition-all duration-150 border-l-2 border-transparent;
+  }
+
+  .unit-list-item:hover {
+    @apply bg-accent/50;
+  }
+
+  .unit-list-item.selected {
+    @apply bg-primary text-primary-foreground border-l-primary;
+  }
+
+  .converter-card {
+    box-shadow: var(--shadow-card);
+    @apply bg-card rounded-xl border border-border/50;
+  }
+
+  .input-number {
+    font-family: var(--number-font);
+    @apply text-2xl font-medium tracking-tight;
+  }
+
+  .result-value {
+    font-family: var(--number-font);
+    @apply font-medium tabular-nums;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .pulse-on-change {
+    animation: pulse 0.3s ease-out;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: hsl(var(--accent));
+    }
+    100% {
+      background-color: transparent;
+    }
   }
 }
