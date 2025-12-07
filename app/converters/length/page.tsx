@@ -1,4 +1,4 @@
-import { LengthConverter } from "@/components/converters/length/Length";
+import LengthConverter from "@/components/converters/length/Length";
 import { Zap, Shield, Globe } from "lucide-react";
 
 export default function LengthConverterPage() {

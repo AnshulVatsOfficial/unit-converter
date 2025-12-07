@@ -1,0 +1,1082 @@
+[
+  {
+    "category": "length",
+    "from": "meter",
+    "to": "kilometer"
+  },
+  {
+    "category": "length",
+    "from": "meter",
+    "to": "centimeter"
+  },
+  {
+    "category": "length",
+    "from": "meter",
+    "to": "millimeter"
+  },
+  {
+    "category": "length",
+    "from": "meter",
+    "to": "inch"
+  },
+  {
+    "category": "length",
+    "from": "meter",
+    "to": "foot"
+  },
+  {
+    "category": "length",
+    "from": "meter",
+    "to": "yard"
+  },
+  {
+    "category": "length",
+    "from": "meter",
+    "to": "mile"
+  },
+  {
+    "category": "length",
+    "from": "kilometer",
+    "to": "meter"
+  },
+  {
+    "category": "length",
+    "from": "kilometer",
+    "to": "centimeter"
+  },
+  {
+    "category": "length",
+    "from": "kilometer",
+    "to": "millimeter"
+  },
+  {
+    "category": "length",
+    "from": "kilometer",
+    "to": "inch"
+  },
+  {
+    "category": "length",
+    "from": "kilometer",
+    "to": "foot"
+  },
+  {
+    "category": "length",
+    "from": "kilometer",
+    "to": "yard"
+  },
+  {
+    "category": "length",
+    "from": "kilometer",
+    "to": "mile"
+  },
+  {
+    "category": "length",
+    "from": "centimeter",
+    "to": "meter"
+  },
+  {
+    "category": "length",
+    "from": "centimeter",
+    "to": "kilometer"
+  },
+  {
+    "category": "length",
+    "from": "centimeter",
+    "to": "millimeter"
+  },
+  {
+    "category": "length",
+    "from": "centimeter",
+    "to": "inch"
+  },
+  {
+    "category": "length",
+    "from": "centimeter",
+    "to": "foot"
+  },
+  {
+    "category": "length",
+    "from": "centimeter",
+    "to": "yard"
+  },
+  {
+    "category": "length",
+    "from": "centimeter",
+    "to": "mile"
+  },
+  {
+    "category": "length",
+    "from": "millimeter",
+    "to": "meter"
+  },
+  {
+    "category": "length",
+    "from": "millimeter",
+    "to": "kilometer"
+  },
+  {
+    "category": "length",
+    "from": "millimeter",
+    "to": "centimeter"
+  },
+  {
+    "category": "length",
+    "from": "millimeter",
+    "to": "inch"
+  },
+  {
+    "category": "length",
+    "from": "millimeter",
+    "to": "foot"
+  },
+  {
+    "category": "length",
+    "from": "millimeter",
+    "to": "yard"
+  },
+  {
+    "category": "length",
+    "from": "millimeter",
+    "to": "mile"
+  },
+  {
+    "category": "length",
+    "from": "inch",
+    "to": "meter"
+  },
+  {
+    "category": "length",
+    "from": "inch",
+    "to": "kilometer"
+  },
+  {
+    "category": "length",
+    "from": "inch",
+    "to": "centimeter"
+  },
+  {
+    "category": "length",
+    "from": "inch",
+    "to": "millimeter"
+  },
+  {
+    "category": "length",
+    "from": "inch",
+    "to": "foot"
+  },
+  {
+    "category": "length",
+    "from": "inch",
+    "to": "yard"
+  },
+  {
+    "category": "length",
+    "from": "inch",
+    "to": "mile"
+  },
+  {
+    "category": "length",
+    "from": "foot",
+    "to": "meter"
+  },
+  {
+    "category": "length",
+    "from": "foot",
+    "to": "kilometer"
+  },
+  {
+    "category": "length",
+    "from": "foot",
+    "to": "centimeter"
+  },
+  {
+    "category": "length",
+    "from": "foot",
+    "to": "millimeter"
+  },
+  {
+    "category": "length",
+    "from": "foot",
+    "to": "inch"
+  },
+  {
+    "category": "length",
+    "from": "foot",
+    "to": "yard"
+  },
+  {
+    "category": "length",
+    "from": "foot",
+    "to": "mile"
+  },
+  {
+    "category": "length",
+    "from": "yard",
+    "to": "meter"
+  },
+  {
+    "category": "length",
+    "from": "yard",
+    "to": "kilometer"
+  },
+  {
+    "category": "length",
+    "from": "yard",
+    "to": "centimeter"
+  },
+  {
+    "category": "length",
+    "from": "yard",
+    "to": "millimeter"
+  },
+  {
+    "category": "length",
+    "from": "yard",
+    "to": "inch"
+  },
+  {
+    "category": "length",
+    "from": "yard",
+    "to": "foot"
+  },
+  {
+    "category": "length",
+    "from": "yard",
+    "to": "mile"
+  },
+  {
+    "category": "length",
+    "from": "mile",
+    "to": "meter"
+  },
+  {
+    "category": "length",
+    "from": "mile",
+    "to": "kilometer"
+  },
+  {
+    "category": "length",
+    "from": "mile",
+    "to": "centimeter"
+  },
+  {
+    "category": "length",
+    "from": "mile",
+    "to": "millimeter"
+  },
+  {
+    "category": "length",
+    "from": "mile",
+    "to": "inch"
+  },
+  {
+    "category": "length",
+    "from": "mile",
+    "to": "foot"
+  },
+  {
+    "category": "length",
+    "from": "mile",
+    "to": "yard"
+  },
+  {
+    "category": "weight",
+    "from": "kilogram",
+    "to": "gram"
+  },
+  {
+    "category": "weight",
+    "from": "kilogram",
+    "to": "milligram"
+  },
+  {
+    "category": "weight",
+    "from": "kilogram",
+    "to": "pound"
+  },
+  {
+    "category": "weight",
+    "from": "kilogram",
+    "to": "ounce"
+  },
+  {
+    "category": "weight",
+    "from": "kilogram",
+    "to": "ton"
+  },
+  {
+    "category": "weight",
+    "from": "gram",
+    "to": "kilogram"
+  },
+  {
+    "category": "weight",
+    "from": "gram",
+    "to": "milligram"
+  },
+  {
+    "category": "weight",
+    "from": "gram",
+    "to": "pound"
+  },
+  {
+    "category": "weight",
+    "from": "gram",
+    "to": "ounce"
+  },
+  {
+    "category": "weight",
+    "from": "gram",
+    "to": "ton"
+  },
+  {
+    "category": "weight",
+    "from": "milligram",
+    "to": "kilogram"
+  },
+  {
+    "category": "weight",
+    "from": "milligram",
+    "to": "gram"
+  },
+  {
+    "category": "weight",
+    "from": "milligram",
+    "to": "pound"
+  },
+  {
+    "category": "weight",
+    "from": "milligram",
+    "to": "ounce"
+  },
+  {
+    "category": "weight",
+    "from": "milligram",
+    "to": "ton"
+  },
+  {
+    "category": "weight",
+    "from": "pound",
+    "to": "kilogram"
+  },
+  {
+    "category": "weight",
+    "from": "pound",
+    "to": "gram"
+  },
+  {
+    "category": "weight",
+    "from": "pound",
+    "to": "milligram"
+  },
+  {
+    "category": "weight",
+    "from": "pound",
+    "to": "ounce"
+  },
+  {
+    "category": "weight",
+    "from": "pound",
+    "to": "ton"
+  },
+  {
+    "category": "weight",
+    "from": "ounce",
+    "to": "kilogram"
+  },
+  {
+    "category": "weight",
+    "from": "ounce",
+    "to": "gram"
+  },
+  {
+    "category": "weight",
+    "from": "ounce",
+    "to": "milligram"
+  },
+  {
+    "category": "weight",
+    "from": "ounce",
+    "to": "pound"
+  },
+  {
+    "category": "weight",
+    "from": "ounce",
+    "to": "ton"
+  },
+  {
+    "category": "weight",
+    "from": "ton",
+    "to": "kilogram"
+  },
+  {
+    "category": "weight",
+    "from": "ton",
+    "to": "gram"
+  },
+  {
+    "category": "weight",
+    "from": "ton",
+    "to": "milligram"
+  },
+  {
+    "category": "weight",
+    "from": "ton",
+    "to": "pound"
+  },
+  {
+    "category": "weight",
+    "from": "ton",
+    "to": "ounce"
+  },
+  {
+    "category": "temperature",
+    "from": "celsius",
+    "to": "fahrenheit"
+  },
+  {
+    "category": "temperature",
+    "from": "celsius",
+    "to": "kelvin"
+  },
+  {
+    "category": "temperature",
+    "from": "fahrenheit",
+    "to": "celsius"
+  },
+  {
+    "category": "temperature",
+    "from": "fahrenheit",
+    "to": "kelvin"
+  },
+  {
+    "category": "temperature",
+    "from": "kelvin",
+    "to": "celsius"
+  },
+  {
+    "category": "temperature",
+    "from": "kelvin",
+    "to": "fahrenheit"
+  },
+  {
+    "category": "time",
+    "from": "second",
+    "to": "minute"
+  },
+  {
+    "category": "time",
+    "from": "second",
+    "to": "hour"
+  },
+  {
+    "category": "time",
+    "from": "second",
+    "to": "day"
+  },
+  {
+    "category": "time",
+    "from": "second",
+    "to": "week"
+  },
+  {
+    "category": "time",
+    "from": "minute",
+    "to": "second"
+  },
+  {
+    "category": "time",
+    "from": "minute",
+    "to": "hour"
+  },
+  {
+    "category": "time",
+    "from": "minute",
+    "to": "day"
+  },
+  {
+    "category": "time",
+    "from": "minute",
+    "to": "week"
+  },
+  {
+    "category": "time",
+    "from": "hour",
+    "to": "second"
+  },
+  {
+    "category": "time",
+    "from": "hour",
+    "to": "minute"
+  },
+  {
+    "category": "time",
+    "from": "hour",
+    "to": "day"
+  },
+  {
+    "category": "time",
+    "from": "hour",
+    "to": "week"
+  },
+  {
+    "category": "time",
+    "from": "day",
+    "to": "second"
+  },
+  {
+    "category": "time",
+    "from": "day",
+    "to": "minute"
+  },
+  {
+    "category": "time",
+    "from": "day",
+    "to": "hour"
+  },
+  {
+    "category": "time",
+    "from": "day",
+    "to": "week"
+  },
+  {
+    "category": "time",
+    "from": "week",
+    "to": "second"
+  },
+  {
+    "category": "time",
+    "from": "week",
+    "to": "minute"
+  },
+  {
+    "category": "time",
+    "from": "week",
+    "to": "hour"
+  },
+  {
+    "category": "time",
+    "from": "week",
+    "to": "day"
+  },
+  {
+    "category": "area",
+    "from": "square_meter",
+    "to": "square_foot"
+  },
+  {
+    "category": "area",
+    "from": "square_meter",
+    "to": "acre"
+  },
+  {
+    "category": "area",
+    "from": "square_meter",
+    "to": "hectare"
+  },
+  {
+    "category": "area",
+    "from": "square_foot",
+    "to": "square_meter"
+  },
+  {
+    "category": "area",
+    "from": "square_foot",
+    "to": "acre"
+  },
+  {
+    "category": "area",
+    "from": "square_foot",
+    "to": "hectare"
+  },
+  {
+    "category": "area",
+    "from": "acre",
+    "to": "square_meter"
+  },
+  {
+    "category": "area",
+    "from": "acre",
+    "to": "square_foot"
+  },
+  {
+    "category": "area",
+    "from": "acre",
+    "to": "hectare"
+  },
+  {
+    "category": "area",
+    "from": "hectare",
+    "to": "square_meter"
+  },
+  {
+    "category": "area",
+    "from": "hectare",
+    "to": "square_foot"
+  },
+  {
+    "category": "area",
+    "from": "hectare",
+    "to": "acre"
+  },
+  {
+    "category": "volume",
+    "from": "liter",
+    "to": "milliliter"
+  },
+  {
+    "category": "volume",
+    "from": "liter",
+    "to": "gallon_us"
+  },
+  {
+    "category": "volume",
+    "from": "liter",
+    "to": "quart_us"
+  },
+  {
+    "category": "volume",
+    "from": "liter",
+    "to": "pint_us"
+  },
+  {
+    "category": "volume",
+    "from": "liter",
+    "to": "cup_us"
+  },
+  {
+    "category": "volume",
+    "from": "milliliter",
+    "to": "liter"
+  },
+  {
+    "category": "volume",
+    "from": "milliliter",
+    "to": "gallon_us"
+  },
+  {
+    "category": "volume",
+    "from": "milliliter",
+    "to": "quart_us"
+  },
+  {
+    "category": "volume",
+    "from": "milliliter",
+    "to": "pint_us"
+  },
+  {
+    "category": "volume",
+    "from": "milliliter",
+    "to": "cup_us"
+  },
+  {
+    "category": "volume",
+    "from": "gallon_us",
+    "to": "liter"
+  },
+  {
+    "category": "volume",
+    "from": "gallon_us",
+    "to": "milliliter"
+  },
+  {
+    "category": "volume",
+    "from": "gallon_us",
+    "to": "quart_us"
+  },
+  {
+    "category": "volume",
+    "from": "gallon_us",
+    "to": "pint_us"
+  },
+  {
+    "category": "volume",
+    "from": "gallon_us",
+    "to": "cup_us"
+  },
+  {
+    "category": "volume",
+    "from": "quart_us",
+    "to": "liter"
+  },
+  {
+    "category": "volume",
+    "from": "quart_us",
+    "to": "milliliter"
+  },
+  {
+    "category": "volume",
+    "from": "quart_us",
+    "to": "gallon_us"
+  },
+  {
+    "category": "volume",
+    "from": "quart_us",
+    "to": "pint_us"
+  },
+  {
+    "category": "volume",
+    "from": "quart_us",
+    "to": "cup_us"
+  },
+  {
+    "category": "volume",
+    "from": "pint_us",
+    "to": "liter"
+  },
+  {
+    "category": "volume",
+    "from": "pint_us",
+    "to": "milliliter"
+  },
+  {
+    "category": "volume",
+    "from": "pint_us",
+    "to": "gallon_us"
+  },
+  {
+    "category": "volume",
+    "from": "pint_us",
+    "to": "quart_us"
+  },
+  {
+    "category": "volume",
+    "from": "pint_us",
+    "to": "cup_us"
+  },
+  {
+    "category": "volume",
+    "from": "cup_us",
+    "to": "liter"
+  },
+  {
+    "category": "volume",
+    "from": "cup_us",
+    "to": "milliliter"
+  },
+  {
+    "category": "volume",
+    "from": "cup_us",
+    "to": "gallon_us"
+  },
+  {
+    "category": "volume",
+    "from": "cup_us",
+    "to": "quart_us"
+  },
+  {
+    "category": "volume",
+    "from": "cup_us",
+    "to": "pint_us"
+  },
+  {
+    "category": "speed",
+    "from": "m_per_s",
+    "to": "km_per_h"
+  },
+  {
+    "category": "speed",
+    "from": "m_per_s",
+    "to": "mph"
+  },
+  {
+    "category": "speed",
+    "from": "m_per_s",
+    "to": "knot"
+  },
+  {
+    "category": "speed",
+    "from": "km_per_h",
+    "to": "m_per_s"
+  },
+  {
+    "category": "speed",
+    "from": "km_per_h",
+    "to": "mph"
+  },
+  {
+    "category": "speed",
+    "from": "km_per_h",
+    "to": "knot"
+  },
+  {
+    "category": "speed",
+    "from": "mph",
+    "to": "m_per_s"
+  },
+  {
+    "category": "speed",
+    "from": "mph",
+    "to": "km_per_h"
+  },
+  {
+    "category": "speed",
+    "from": "mph",
+    "to": "knot"
+  },
+  {
+    "category": "speed",
+    "from": "knot",
+    "to": "m_per_s"
+  },
+  {
+    "category": "speed",
+    "from": "knot",
+    "to": "km_per_h"
+  },
+  {
+    "category": "speed",
+    "from": "knot",
+    "to": "mph"
+  },
+  {
+    "category": "data",
+    "from": "byte",
+    "to": "kilobyte"
+  },
+  {
+    "category": "data",
+    "from": "byte",
+    "to": "megabyte"
+  },
+  {
+    "category": "data",
+    "from": "byte",
+    "to": "gigabyte"
+  },
+  {
+    "category": "data",
+    "from": "byte",
+    "to": "terabyte"
+  },
+  {
+    "category": "data",
+    "from": "kilobyte",
+    "to": "byte"
+  },
+  {
+    "category": "data",
+    "from": "kilobyte",
+    "to": "megabyte"
+  },
+  {
+    "category": "data",
+    "from": "kilobyte",
+    "to": "gigabyte"
+  },
+  {
+    "category": "data",
+    "from": "kilobyte",
+    "to": "terabyte"
+  },
+  {
+    "category": "data",
+    "from": "megabyte",
+    "to": "byte"
+  },
+  {
+    "category": "data",
+    "from": "megabyte",
+    "to": "kilobyte"
+  },
+  {
+    "category": "data",
+    "from": "megabyte",
+    "to": "gigabyte"
+  },
+  {
+    "category": "data",
+    "from": "megabyte",
+    "to": "terabyte"
+  },
+  {
+    "category": "data",
+    "from": "gigabyte",
+    "to": "byte"
+  },
+  {
+    "category": "data",
+    "from": "gigabyte",
+    "to": "kilobyte"
+  },
+  {
+    "category": "data",
+    "from": "gigabyte",
+    "to": "megabyte"
+  },
+  {
+    "category": "data",
+    "from": "gigabyte",
+    "to": "terabyte"
+  },
+  {
+    "category": "data",
+    "from": "terabyte",
+    "to": "byte"
+  },
+  {
+    "category": "data",
+    "from": "terabyte",
+    "to": "kilobyte"
+  },
+  {
+    "category": "data",
+    "from": "terabyte",
+    "to": "megabyte"
+  },
+  {
+    "category": "data",
+    "from": "terabyte",
+    "to": "gigabyte"
+  },
+  {
+    "category": "pressure",
+    "from": "pascal",
+    "to": "bar"
+  },
+  {
+    "category": "pressure",
+    "from": "pascal",
+    "to": "psi"
+  },
+  {
+    "category": "pressure",
+    "from": "pascal",
+    "to": "atm"
+  },
+  {
+    "category": "pressure",
+    "from": "bar",
+    "to": "pascal"
+  },
+  {
+    "category": "pressure",
+    "from": "bar",
+    "to": "psi"
+  },
+  {
+    "category": "pressure",
+    "from": "bar",
+    "to": "atm"
+  },
+  {
+    "category": "pressure",
+    "from": "psi",
+    "to": "pascal"
+  },
+  {
+    "category": "pressure",
+    "from": "psi",
+    "to": "bar"
+  },
+  {
+    "category": "pressure",
+    "from": "psi",
+    "to": "atm"
+  },
+  {
+    "category": "pressure",
+    "from": "atm",
+    "to": "pascal"
+  },
+  {
+    "category": "pressure",
+    "from": "atm",
+    "to": "bar"
+  },
+  {
+    "category": "pressure",
+    "from": "atm",
+    "to": "psi"
+  },
+  {
+    "category": "energy",
+    "from": "joule",
+    "to": "calorie"
+  },
+  {
+    "category": "energy",
+    "from": "joule",
+    "to": "kilojoule"
+  },
+  {
+    "category": "energy",
+    "from": "joule",
+    "to": "kilowatt_hour"
+  },
+  {
+    "category": "energy",
+    "from": "calorie",
+    "to": "joule"
+  },
+  {
+    "category": "energy",
+    "from": "calorie",
+    "to": "kilojoule"
+  },
+  {
+    "category": "energy",
+    "from": "calorie",
+    "to": "kilowatt_hour"
+  },
+  {
+    "category": "energy",
+    "from": "kilojoule",
+    "to": "joule"
+  },
+  {
+    "category": "energy",
+    "from": "kilojoule",
+    "to": "calorie"
+  },
+  {
+    "category": "energy",
+    "from": "kilojoule",
+    "to": "kilowatt_hour"
+  },
+  {
+    "category": "energy",
+    "from": "kilowatt_hour",
+    "to": "joule"
+  },
+  {
+    "category": "energy",
+    "from": "kilowatt_hour",
+    "to": "calorie"
+  },
+  {
+    "category": "energy",
+    "from": "kilowatt_hour",
+    "to": "kilojoule"
+  },
+  {
+    "category": "power",
+    "from": "watt",
+    "to": "kilowatt"
+  },
+  {
+    "category": "power",
+    "from": "watt",
+    "to": "horsepower"
+  },
+  {
+    "category": "power",
+    "from": "kilowatt",
+    "to": "watt"
+  },
+  {
+    "category": "power",
+    "from": "kilowatt",
+    "to": "horsepower"
+  },
+  {
+    "category": "power",
+    "from": "horsepower",
+    "to": "watt"
+  },
+  {
+    "category": "power",
+    "from": "horsepower",
+    "to": "kilowatt"
+  }
+]

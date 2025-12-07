@@ -14,7 +14,7 @@ import { AreaUnit } from "@/types/area/area";
 import { AreaUnitSelector } from "./AreaUnitSelector";
 import { AreaResultsList } from "./AreaResultsList";
 
-export function AreaConverter() {
+export default function AreaConverter() {
   const [inputValue, setInputValue] = useState<string>("1");
   const [fromUnit, setFromUnit] = useState<AreaUnit>(areaUnits[0]); // Square Meter
   const [toUnit, setToUnit] = useState<AreaUnit>(areaUnits[1]); // Square Kilometer

@@ -1,30 +1,83 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowRightLeft, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { UnitInput } from "@/components/common/UnitInput";
 import { LengthUnitSelector } from "@/components/converters/length/LengthUnitSelector";
 import { LengthResultsList } from "@/components/converters/length/LengthResultsList";
-import {
-  lengthUnits,
-  convertToAllUnits,
-  formatNumber,
-} from "@/conversions/length/length";
+import { convertToAllUnits, formatNumber } from "@/conversions/length/length";
 import { LengthUnit } from "@/types/length/length";
+import unitsJson from "@/data/units.json";
 import { toast } from "sonner";
 
-export function LengthConverter() {
-  const [inputValue, setInputValue] = useState<string>("1");
-  const [fromUnit, setFromUnit] = useState<LengthUnit>(lengthUnits[0]); // Meter
-  const [toUnit, setToUnit] = useState<LengthUnit>(lengthUnits[2]); // Centimeter
+type Props = {
+  /** optional ids (unit.id) to preselect when hydrating from an SSG page */
+  defaultFromId?: string;
+  defaultToId?: string;
+  defaultValue?: string; // string to match your input value type
+};
+
+/** Helper: pretty name builder for ids like "light_year" -> "Light Year" */
+function prettyNameFromId(id: string) {
+  return id
+    .replace(/_/g, " ")
+    .split(" ")
+    .map((w) => (w.length ? w[0].toUpperCase() + w.slice(1) : w))
+    .join(" ");
+}
+
+/** Build lengthUnits from data/units.json (single source of truth) */
+const lengthUnits: LengthUnit[] = Object.entries(
+  (unitsJson as any).length.units
+).map(([id, u]: [string, any]) => ({
+  id,
+  name: prettyNameFromId(id),
+  symbol: u.symbol ?? id,
+  // conversions code expects `toMeters` property
+  toMeters: u.toBase ?? u.toMeters ?? 1,
+}));
+
+export default function LengthConverter({
+  defaultFromId,
+  defaultToId,
+  defaultValue,
+}: Props) {
+  // choose initial unit objects (fallback to existing defaults)
+  const initialFrom =
+    lengthUnits.find((u) => u.id === defaultFromId) ?? lengthUnits[0];
+  const initialTo =
+    lengthUnits.find((u) => u.id === defaultToId) ??
+    lengthUnits[1] ??
+    lengthUnits[0];
+
+  const [inputValue, setInputValue] = useState<string>(defaultValue ?? "1");
+  const [fromUnit, setFromUnit] = useState<LengthUnit>(initialFrom);
+  const [toUnit, setToUnit] = useState<LengthUnit>(initialTo);
   const [copied, setCopied] = useState(false);
+
+  // If props change after mount (unlikely) sync them
+  useEffect(() => {
+    if (defaultFromId) {
+      const f = lengthUnits.find((u) => u.id === defaultFromId);
+      if (f) setFromUnit(f);
+    }
+  }, [defaultFromId]);
+
+  useEffect(() => {
+    if (defaultToId) {
+      const t = lengthUnits.find((u) => u.id === defaultToId);
+      if (t) setToUnit(t);
+    }
+  }, [defaultToId]);
 
   const numericValue = useMemo(() => {
     const parsed = parseFloat(inputValue);
     return isNaN(parsed) ? 0 : parsed;
   }, [inputValue]);
 
+  // convertToAllUnits expects the "fromUnit" to have the same shape as its internal unit list.
+  // Because we derived lengthUnits from the same JSON, shapes match.
   const allResults = useMemo(() => {
     return convertToAllUnits(numericValue, fromUnit);
   }, [numericValue, fromUnit]);
@@ -38,7 +91,7 @@ export function LengthConverter() {
     const newToUnit = fromUnit;
     setFromUnit(newFromUnit);
     setToUnit(newToUnit);
-    // Update input to the converted value
+    // Update input to the converted value (keep same formatting behavior)
     setInputValue(formatNumber(primaryResult).replace(/,/g, ""));
   };
 
@@ -46,10 +99,14 @@ export function LengthConverter() {
     const text = `${inputValue} ${fromUnit.symbol} = ${formatNumber(
       primaryResult
     )} ${toUnit.symbol}`;
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    toast("Copied to clipboard");
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      toast("Copied to clipboard");
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      toast.error?.("Could not copy");
+    }
   };
 
   const handleFromUnitSelect = (unit: LengthUnit) => {
