@@ -64,25 +64,27 @@ export default async function LengthConverterPage({
   const { prettyFrom, prettyTo, title } = prettyFromAndTo(fromId, toId);
 
   return (
-    <main className="w-full h-[calc(100dvh-128px)] flex justify-center overflow-auto">
-      <div className="w-[58rem] p-4 bg-green-300 flex flex-col">
-        <header className="mb-4">
-          <h1 className="text-2xl font-semibold">{title}</h1>
-          <p className="text-sm text-gray-600">
-            Convert {prettyFrom} to {prettyTo} quickly and accurately.
-          </p>
-        </header>
+    <main className="size-full mx-auto overflow-auto">
+      <div className="flex justify-center">
+        <div className="w-[58rem] px-4 pt-4">
+          <header className="mb-4">
+            <h1 className="text-2xl font-semibold">{title}</h1>
+            <p className="text-sm text-gray-600">
+              Convert {prettyFrom} to {prettyTo} quickly and accurately.
+            </p>
+          </header>
 
-        {/* Hydrate your client-side LengthConverter with defaults */}
-        {/* @ts-ignore */}
-        <LengthConverter
-          defaultFromId={fromId}
-          defaultToId={toId}
-          defaultValue="1"
-        />
+          {/* Hydrate your client-side LengthConverter with defaults */}
+          {/* @ts-ignore */}
+          <LengthConverter
+            defaultFromId={fromId}
+            defaultToId={toId}
+            defaultValue="1"
+          />
 
-        {/* Ad slot placeholder (client-side ad insertion only) */}
-        <div id="ad-after-converter" className="my-6" />
+          {/* Ad slot placeholder (client-side ad insertion only) */}
+          <div id="ad-after-converter" className="my-6" />
+        </div>
       </div>
     </main>
   );

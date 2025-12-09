@@ -62,22 +62,26 @@ export default async function AreaConverterPage({
   const { prettyFrom, prettyTo, title } = prettyFromAndTo(fromId, toId);
 
   return (
-    <main className="container mx-auto p-4">
-      <header className="mb-4">
-        <h1 className="text-2xl font-semibold">{title}</h1>
-        <p className="text-sm text-gray-600">
-          Convert {prettyFrom} to {prettyTo} quickly and accurately.
-        </p>
-      </header>
+    <main className="size-full mx-auto overflow-auto">
+      <div className="flex justify-center">
+        <div className="w-[58rem] px-4 pt-4">
+          <header className="mb-4">
+            <h1 className="text-2xl font-semibold">{title}</h1>
+            <p className="text-sm text-gray-600">
+              Convert {prettyFrom} to {prettyTo} quickly and accurately.
+            </p>
+          </header>
 
-      {/* @ts-ignore */}
-      <AreaConverter
-        defaultFromId={fromId}
-        defaultToId={toId}
-        defaultValue="1"
-      />
+          {/* @ts-ignore */}
+          <AreaConverter
+            defaultFromId={fromId}
+            defaultToId={toId}
+            defaultValue="1"
+          />
 
-      <div id="ad-after-converter" className="my-6" />
+          <div id="ad-after-converter" className="my-6" />
+        </div>
+      </div>
     </main>
   );
 }
