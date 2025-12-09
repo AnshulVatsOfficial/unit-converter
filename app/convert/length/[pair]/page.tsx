@@ -4,6 +4,7 @@ import unitsData from "@/data/units.json";
 import LengthConverter from "@/components/converters/length/Length";
 import { notFound } from "next/navigation";
 import { normalizeSlug } from "@/lib/slugAliases";
+import { prettyFromAndTo } from "@/lib/utils";
 
 export const revalidate = 60 * 60 * 24; // ISR: 24 hours
 type Params = { pair: string };
@@ -60,29 +61,29 @@ export default async function LengthConverterPage({
   if (!lengthCategory.units[fromId] || !lengthCategory.units[toId])
     return notFound();
 
-  const prettyFrom = fromId.replace(/_/g, " ");
-  const prettyTo = toId.replace(/_/g, " ");
-  const title = `${prettyFrom} to ${prettyTo} converter — UnitConvert`;
+  const { prettyFrom, prettyTo, title } = prettyFromAndTo(fromId, toId);
 
   return (
-    <main className="container mx-auto p-4">
-      <header className="mb-4">
-        <h1 className="text-2xl font-semibold">{title}</h1>
-        <p className="text-sm text-gray-600">
-          Convert {prettyFrom} to {prettyTo} quickly and accurately.
-        </p>
-      </header>
+    <main className="w-full h-[calc(100dvh-128px)] flex justify-center overflow-auto">
+      <div className="w-[58rem] p-4 bg-green-300 flex flex-col">
+        <header className="mb-4">
+          <h1 className="text-2xl font-semibold">{title}</h1>
+          <p className="text-sm text-gray-600">
+            Convert {prettyFrom} to {prettyTo} quickly and accurately.
+          </p>
+        </header>
 
-      {/* Hydrate your client-side LengthConverter with defaults */}
-      {/* @ts-ignore */}
-      <LengthConverter
-        defaultFromId={fromId}
-        defaultToId={toId}
-        defaultValue="1"
-      />
+        {/* Hydrate your client-side LengthConverter with defaults */}
+        {/* @ts-ignore */}
+        <LengthConverter
+          defaultFromId={fromId}
+          defaultToId={toId}
+          defaultValue="1"
+        />
 
-      {/* Ad slot placeholder (client-side ad insertion only) */}
-      <div id="ad-after-converter" className="my-6" />
+        {/* Ad slot placeholder (client-side ad insertion only) */}
+        <div id="ad-after-converter" className="my-6" />
+      </div>
     </main>
   );
 }

@@ -46,7 +46,10 @@ export default function ConverterPage({ params }: { params: Params }) {
       <header className="mb-4">
         <h1 className="text-2xl font-semibold">{title}</h1>
         <p className="text-sm text-gray-600">
-          Convert {prettyFrom} to {prettyTo} quickly and accurately.
+          Convert{" "}
+          {`${prettyFrom.charAt(0).toUpperCase()}${prettyFrom.substring(1)}`} to{" "}
+          {`${prettyTo.charAt(0).toUpperCase()}${prettyTo.substring(1)}`}{" "}
+          quickly and accurately.
         </p>
       </header>
 

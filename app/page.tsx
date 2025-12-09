@@ -80,7 +80,7 @@ export default function Home() {
             className="size-full overflow-auto"
             value={title}
           >
-            <div className="container mx-auto p-4">
+            <div className="max-w-[58rem] mx-auto p-4">
               <div className="flex justify-between items-start mb-4">
                 <h2 className="text-xl font-semibold">{title} converter</h2>
                 <Link href={canonical} prefetch className="text-sm underline">
