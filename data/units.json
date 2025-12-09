@@ -40,17 +40,23 @@
     "units": {
       "second": { "symbol": "s", "toBase": 1 },
       "millisecond": { "symbol": "ms", "toBase": 0.001 },
-      "microsecond": { "symbol": "µs", "toBase": 1e-6 },
-      "nanosecond": { "symbol": "ns", "toBase": 1e-9 },
-      "picosecond": { "symbol": "ps", "toBase": 1e-12 },
+      "microsecond": { "symbol": "µs", "toBase": 0.000001 },
+      "nanosecond": { "symbol": "ns", "toBase": 0.000000001 },
+      "picosecond": { "symbol": "ps", "toBase": 0.000000000001 },
       "minute": { "symbol": "min", "toBase": 60 },
       "hour": { "symbol": "h", "toBase": 3600 },
       "day": { "symbol": "d", "toBase": 86400 },
       "week": { "symbol": "wk", "toBase": 604800 },
-      "month": { "symbol": "mo", "toBase": 2629746 },
+      "fortnight": { "symbol": "fn", "toBase": 1209600 },
+      "month": {
+        "symbol": "mo",
+        "toBase": 2629746
+      },
+      "quarter": { "symbol": "qtr", "toBase": 7889238 },
       "year": { "symbol": "yr", "toBase": 31557600 },
       "decade": { "symbol": "decade", "toBase": 315576000 },
-      "century": { "symbol": "century", "toBase": 3155760000 }
+      "century": { "symbol": "century", "toBase": 3155760000 },
+      "millennium": { "symbol": "millennium", "toBase": 31557600000 }
     }
   },
 

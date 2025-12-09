@@ -73,7 +73,6 @@ export function AreaResultsList({
   return (
     <div className="space-y-2">
       <p className="text-sm font-medium text-muted-foreground">{label}</p>
-
       <div className="converter-card overflow-hidden">
         <ScrollArea className="h-[320px]">
           <div className="divide-y divide-border/40">
