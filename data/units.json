@@ -60,33 +60,6 @@
     }
   },
 
-  "temperature": {
-    "base": "celsius",
-    "units": {
-      "celsius": { "symbol": "°C", "type": "temp" },
-      "fahrenheit": { "symbol": "°F", "type": "temp" },
-      "kelvin": { "symbol": "K", "type": "temp" },
-      "rankine": { "symbol": "°R", "type": "temp" },
-      "delisle": { "symbol": "°De", "type": "temp" }
-    }
-  },
-
-  "weight": {
-    "base": "kilogram",
-    "units": {
-      "microgram": { "symbol": "μg", "toBase": 1e-9 },
-      "milligram": { "symbol": "mg", "toBase": 1e-6 },
-      "gram": { "symbol": "g", "toBase": 0.001 },
-      "kilogram": { "symbol": "kg", "toBase": 1 },
-      "tonne": { "symbol": "t", "toBase": 1000 },
-      "ounce": { "symbol": "oz", "toBase": 0.028349523125 },
-      "pound": { "symbol": "lb", "toBase": 0.45359237 },
-      "stone": { "symbol": "st", "toBase": 6.35029318 },
-      "short_ton_us": { "symbol": "ton (US)", "toBase": 907.18474 },
-      "long_ton_uk": { "symbol": "ton (UK)", "toBase": 1016.0469088 }
-    }
-  },
-
   "area": {
     "base": "square_meter",
     "units": {
@@ -100,104 +73,6 @@
       "acre": { "symbol": "ac", "toBase": 4046.8564224 },
       "hectare": { "symbol": "ha", "toBase": 10000 },
       "square_mile": { "symbol": "mi²", "toBase": 2589988.110336 }
-    }
-  },
-
-  "volume": {
-    "base": "liter",
-    "units": {
-      "milliliter": { "symbol": "mL", "toBase": 0.001 },
-      "centiliter": { "symbol": "cL", "toBase": 0.01 },
-      "deciliter": { "symbol": "dL", "toBase": 0.1 },
-      "liter": { "symbol": "L", "toBase": 1 },
-      "cubic_meter": { "symbol": "m³", "toBase": 1000 },
-      "cubic_centimeter": { "symbol": "cm³", "toBase": 0.001 },
-      "gallon_us": { "symbol": "gal (US)", "toBase": 3.785411784 },
-      "gallon_uk": { "symbol": "gal (UK)", "toBase": 4.54609 },
-      "quart_us": { "symbol": "qt (US)", "toBase": 0.946352946 },
-      "pint_us": { "symbol": "pt (US)", "toBase": 0.473176473 },
-      "cup_us": { "symbol": "cup (US)", "toBase": 0.24 },
-      "tablespoon_us": { "symbol": "tbsp (US)", "toBase": 0.0147868 },
-      "teaspoon_us": { "symbol": "tsp (US)", "toBase": 0.00492892159375 }
-    }
-  },
-
-  "speed": {
-    "base": "m_per_s",
-    "units": {
-      "m_per_s": { "symbol": "m/s", "toBase": 1 },
-      "km_per_h": { "symbol": "km/h", "toBase": 0.27777777777778 },
-      "mph": { "symbol": "mph", "toBase": 0.44704 },
-      "knot": { "symbol": "kn", "toBase": 0.51444444444444 },
-      "speed_of_light": { "symbol": "c", "toBase": 299792458 }
-    }
-  },
-
-  "data": {
-    "base": "byte",
-    "units": {
-      "bit": { "symbol": "b", "toBase": 0.125 },
-      "byte": { "symbol": "B", "toBase": 1 },
-      "kilobyte": { "symbol": "KB", "toBase": 1024 },
-      "megabyte": { "symbol": "MB", "toBase": 1048576 },
-      "gigabyte": { "symbol": "GB", "toBase": 1073741824 },
-      "terabyte": { "symbol": "TB", "toBase": 1099511627776 },
-      "petabyte": { "symbol": "PB", "toBase": 1125899906842624 }
-    }
-  },
-
-  "pressure": {
-    "base": "pascal",
-    "units": {
-      "pascal": { "symbol": "Pa", "toBase": 1 },
-      "kilopascal": { "symbol": "kPa", "toBase": 1000 },
-      "bar": { "symbol": "bar", "toBase": 100000 },
-      "atm": { "symbol": "atm", "toBase": 101325 },
-      "psi": { "symbol": "psi", "toBase": 6894.757293168 },
-      "torr": { "symbol": "Torr", "toBase": 133.32236842105298 },
-      "millimeter_of_mercury": { "symbol": "mmHg", "toBase": 133.322387415 }
-    }
-  },
-
-  "energy": {
-    "base": "joule",
-    "units": {
-      "joule": { "symbol": "J", "toBase": 1 },
-      "kilojoule": { "symbol": "kJ", "toBase": 1000 },
-      "calorie": { "symbol": "cal", "toBase": 4.184 },
-      "kilowatt_hour": { "symbol": "kWh", "toBase": 3600000 },
-      "electronvolt": { "symbol": "eV", "toBase": 1.602176634e-19 },
-      "british_thermal_unit": { "symbol": "BTU", "toBase": 1055.05585262 }
-    }
-  },
-
-  "power": {
-    "base": "watt",
-    "units": {
-      "watt": { "symbol": "W", "toBase": 1 },
-      "kilowatt": { "symbol": "kW", "toBase": 1000 },
-      "megawatt": { "symbol": "MW", "toBase": 1000000 },
-      "horsepower": { "symbol": "hp", "toBase": 745.69987158227 }
-    }
-  },
-
-  "angle": {
-    "base": "radian",
-    "units": {
-      "radian": { "symbol": "rad", "toBase": 1 },
-      "degree": { "symbol": "°", "toBase": 0.017453292519943295 },
-      "arcminute": { "symbol": "'", "toBase": 0.0002908882086657216 },
-      "arcsecond": { "symbol": "\"", "toBase": 4.84813681109536e-6 }
-    }
-  },
-
-  "frequency": {
-    "base": "hertz",
-    "units": {
-      "hertz": { "symbol": "Hz", "toBase": 1 },
-      "kilohertz": { "symbol": "kHz", "toBase": 1000 },
-      "megahertz": { "symbol": "MHz", "toBase": 1000000 },
-      "gigahertz": { "symbol": "GHz", "toBase": 1000000000 }
     }
   }
 }

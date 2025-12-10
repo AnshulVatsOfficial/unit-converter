@@ -1,7 +1,6 @@
 // app/page.tsx
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-// import the client UI components (NOT the route pages)
 import LengthConverter from "@/components/converters/length/Length";
 import AreaConverter from "@/components/converters/area/Area"; // adjust name/path if different
 import TimeConverter from "@/components/converters/time/TimeConverter";

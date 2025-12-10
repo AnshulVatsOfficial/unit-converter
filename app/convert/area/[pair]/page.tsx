@@ -7,7 +7,6 @@ import { notFound } from "next/navigation";
 import { normalizeSlug } from "@/lib/slugAliases";
 import { prettyFromAndTo } from "@/lib/utils";
 
-export const revalidate = 60 * 60 * 24; // ISR: 24 hours
 type Params = { pair: string };
 
 export async function generateMetadata({ params }: { params: Params }) {

@@ -6,9 +6,6 @@ import unitsData from "@/data/units.json";
 
 type Params = { category: string; pair: string };
 
-// revalidate (ISR): seconds (24 hours)
-export const revalidate = 60 * 60 * 24;
-
 export async function generateStaticParams() {
   // Pre-render priority pairs (SSG). Generate this file with your script.
   const p = path.join(process.cwd(), "data", "priorityPairs.json");
