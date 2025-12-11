@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://unitlab.org/sitemap.xml
