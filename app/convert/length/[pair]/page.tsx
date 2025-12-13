@@ -5,6 +5,7 @@ import LengthConverter from "@/components/converters/length/Length";
 import { notFound } from "next/navigation";
 import { normalizeSlug } from "@/lib/slugAliases";
 import { prettyFromAndTo } from "@/lib/utils";
+import AdUnit from "@/components/common/AdUnit";
 
 type Params = { pair: string };
 
@@ -63,9 +64,36 @@ export default async function LengthConverterPage({
   const { prettyFrom, prettyTo, title } = prettyFromAndTo(fromId, toId);
 
   return (
-    <main className="size-full mx-auto overflow-auto">
-      <div className="flex justify-center">
-        <div className="w-[50rem] px-4 pt-4">
+    // <main className="size-full mx-auto bg-pink-100 flex justify-center">
+    //   <div className="w-[50rem] px-4 pt-4">
+    //     <header className="mb-4">
+    //       <h1 className="text-2xl font-semibold">{title}</h1>
+    //       <p className="text-sm text-gray-600">
+    //         Convert {prettyFrom} to {prettyTo} quickly and accurately.
+    //       </p>
+    //     </header>
+
+    //     {/* Hydrate your client-side LengthConverter with defaults */}
+    //     {/* @ts-ignore */}
+    //     <LengthConverter
+    //       defaultFromId={fromId}
+    //       defaultToId={toId}
+    //       defaultValue="1"
+    //     />
+
+    //     {/* Ad slot placeholder (client-side ad insertion only) */}
+    //     <AdUnit slot="2907738439" />
+    //   </div>
+    // </main>
+    <main className="size-full mx-auto flex justify-center">
+      <div className="w-full flex justify-center pt-4">
+        {/* --- LEFT AD --- */}
+        <div className="hidden lg:flex flex-col mr-6">
+          <AdUnit slot="2907738439" />
+        </div>
+
+        {/* --- MAIN CONTENT --- */}
+        <div className="w-[50rem] px-4">
           <header className="mb-4">
             <h1 className="text-2xl font-semibold">{title}</h1>
             <p className="text-sm text-gray-600">
@@ -73,16 +101,22 @@ export default async function LengthConverterPage({
             </p>
           </header>
 
-          {/* Hydrate your client-side LengthConverter with defaults */}
-          {/* @ts-ignore */}
+          {/* Converter */}
           <LengthConverter
             defaultFromId={fromId}
             defaultToId={toId}
             defaultValue="1"
           />
 
-          {/* Ad slot placeholder (client-side ad insertion only) */}
-          <div id="ad-after-converter" className="my-6" />
+          {/* --- BOTTOM AD --- */}
+          <div className="mt-6 flex justify-center">
+            <AdUnit slot="2907738439" />
+          </div>
+        </div>
+
+        {/* --- RIGHT AD --- */}
+        <div className="hidden lg:flex flex-col ml-6">
+          <AdUnit slot="2907738439" />
         </div>
       </div>
     </main>
