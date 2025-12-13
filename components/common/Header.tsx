@@ -17,7 +17,7 @@ export function Header() {
           <Calculator className="h-5 w-5 text-primary" />
         </div>
         <span className="font-semibold text-lg tracking-tight">
-          Unit<span className="text-primary">Convert</span>
+          Unit<span className="text-primary">lab</span>
         </span>
       </div>
     </header>

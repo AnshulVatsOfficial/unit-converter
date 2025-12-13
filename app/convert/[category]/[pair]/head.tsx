@@ -10,7 +10,7 @@ export default function Head({
   const [from, to] = pair.split("-to-");
   const prettyFrom = from?.replace(/_/g, " ") ?? "";
   const prettyTo = to?.replace(/_/g, " ") ?? "";
-  const title = `${prettyFrom} to ${prettyTo} converter — UnitConvert`;
+  const title = `${prettyFrom} to ${prettyTo} converter — Unitlab`;
   const description = `Convert ${prettyFrom} to ${prettyTo} quickly and accurately.`;
 
   const canonical = `${process.env.NEXT_PUBLIC_BASE_URL}/convert/${category}/${pair}`;

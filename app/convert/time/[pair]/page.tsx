@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   toId = normalizeSlug(toId);
 
   return {
-    title: `${fromId} to ${toId} converter — UnitConvert`,
+    title: `${fromId} to ${toId} converter — Unitlab`,
     description: `Convert ${fromId} to ${toId} quickly and accurately.`,
     alternates: {
       canonical: `/convert/time/${pair}`,
@@ -66,7 +66,7 @@ export default async function TimeConverterPage({
   return (
     <main className="size-full mx-auto overflow-auto">
       <div className="flex justify-center">
-        <div className="w-[58rem] px-4 pt-4">
+        <div className="w-[50rem] px-4 pt-4">
           <header className="mb-4">
             <h1 className="text-2xl font-semibold">{title}</h1>
             <p className="text-sm text-gray-600">

@@ -33,7 +33,7 @@ export default function Home() {
         className="size-full flex flex-col items-center pt-2"
         defaultValue={converters[0].title}
       >
-        <TabsList className="w-full flex justify-start gap-x-2 overflow-x-auto overflow-y-hidden max-w-[60rem] px-6 bg-transparent">
+        <TabsList className="w-full flex justify-start gap-x-2 overflow-x-auto overflow-y-hidden max-w-[50rem] px-4 bg-transparent">
           {converters.map(({ title }, index) => (
             <TabsTrigger key={`${title}-${index}`} value={title}>
               {title}
@@ -47,8 +47,8 @@ export default function Home() {
             className="size-full overflow-auto"
             value={title}
           >
-            <div className="max-w-[58rem] mx-auto p-4">
-              <div className="flex justify-between items-start mb-4">
+            <div className="max-w-[50rem] mx-auto p-4">
+              <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-semibold">{title} converter</h2>
                 <Link href={canonical} prefetch className="text-sm underline">
                   View full {title} converter page

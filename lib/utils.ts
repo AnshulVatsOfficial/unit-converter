@@ -15,6 +15,6 @@ export const prettyFromAndTo = (from: string, to: string) => {
       1
     )} to ${prettyTo.charAt(0).toUpperCase()}${prettyTo.substring(
       1
-    )} converter — UnitConvert`,
+    )} converter — Unitlab`,
   };
 };
