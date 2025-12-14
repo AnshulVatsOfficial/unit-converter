@@ -64,6 +64,14 @@ export default async function LengthConverterPage({
 
   const { prettyFrom, prettyTo, title } = prettyFromAndTo(fromId, toId);
 
+  const atOptions = {
+    key: "b8f3de4b82bc0efb796afe6a4841a165",
+    format: "iframe",
+    height: 90,
+    width: 728,
+    params: {},
+  };
+
   return (
     // <main className="size-full mx-auto bg-pink-100 flex justify-center">
     //   <div className="w-[50rem] px-4 pt-4">
@@ -123,6 +131,13 @@ export default async function LengthConverterPage({
         <div className="hidden lg:flex flex-col ml-6 w-[160px]">
           <div className="ad-container">
             {/* <AdUnit slot="2907738439" /> */}
+            <Script
+              async
+              data-cfasync="false"
+              src="https://pl28257044.effectivegatecpm.com/6114a3778bfb9a9d6183ff676addd374/invoke.js"
+              strategy="afterInteractive"
+            />
+            <div id="container-6114a3778bfb9a9d6183ff676addd374"></div>
           </div>
         </div>
       </div>
