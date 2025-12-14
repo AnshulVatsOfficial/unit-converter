@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { normalizeSlug } from "@/lib/slugAliases";
 import { prettyFromAndTo } from "@/lib/utils";
 import AdUnit from "@/components/common/AdUnit";
+import Script from "next/script";
 
 type Params = { pair: string };
 
@@ -87,9 +88,14 @@ export default async function LengthConverterPage({
     // </main>
     <main className="size-full mx-auto flex justify-center">
       <div className="w-full flex justify-center pt-4">
-        {/* --- LEFT AD --- */}
-        <div className="hidden lg:flex flex-col mr-6">
-          <AdUnit slot="2907738439" />
+        {/* --- LEFT AD (fixed width container) --- */}
+        <div className="hidden lg:flex flex-col mr-6 w-[160px]">
+          <div className="ad-container mb-4">
+            <Script
+              src="https://pl28256669.effectivegatecpm.com/04/11/9a/04119ab3cbd57d8ec09916327552a7d2.js"
+              strategy="afterInteractive"
+            />
+          </div>
         </div>
 
         {/* --- MAIN CONTENT --- */}
@@ -101,7 +107,6 @@ export default async function LengthConverterPage({
             </p>
           </header>
 
-          {/* Converter */}
           <LengthConverter
             defaultFromId={fromId}
             defaultToId={toId}
@@ -110,13 +115,15 @@ export default async function LengthConverterPage({
 
           {/* --- BOTTOM AD --- */}
           <div className="mt-6 flex justify-center">
-            <AdUnit slot="2907738439" />
+            {/* <AdUnit slot="2907738439" /> */}
           </div>
         </div>
 
-        {/* --- RIGHT AD --- */}
-        <div className="hidden lg:flex flex-col ml-6">
-          <AdUnit slot="2907738439" />
+        {/* --- RIGHT AD (fixed width container) --- */}
+        <div className="hidden lg:flex flex-col ml-6 w-[160px]">
+          <div className="ad-container">
+            {/* <AdUnit slot="2907738439" /> */}
+          </div>
         </div>
       </div>
     </main>
