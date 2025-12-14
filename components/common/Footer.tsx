@@ -9,8 +9,8 @@ export function Footer() {
           <div className="p-1.5 rounded-md bg-primary/10">
             <Calculator className="h-4 w-4 text-primary" />
           </div>
-          <span className="text-sm font-medium">
-            Unit<span className="text-primary">lab</span>
+          <span className="text-sm font-medium text-primary">
+            Unit<span className="text-primary/70">lab</span>
           </span>
         </div>
 

@@ -31,9 +31,9 @@ export default function HtmlSitemapPage() {
 
           {/* LENGTH TAB */}
           <TabsContent value="length" className="size-full overflow-auto">
-            {/* <h2 className="text-xl font-semibold mt-4 mb-2">
+            <h1 className="text-xl font-semibold mt-4 mb-2">
               Length Converters
-            </h2> */}
+            </h1>
             <ul className="list-disc ml-6 space-y-1">
               {lengthPairs.map((pair) => (
                 <li key={`${pair.from}-${pair.to}`}>
@@ -51,7 +51,7 @@ export default function HtmlSitemapPage() {
 
           {/* AREA TAB */}
           <TabsContent value="area" className="size-full overflow-auto">
-            {/* <h2 className="text-xl font-semibold mt-4 mb-2">Area Converters</h2> */}
+            <h1 className="text-xl font-semibold mt-4 mb-2">Area Converters</h1>
             <ul className="list-disc ml-6 space-y-1">
               {areaPairs.map((pair) => (
                 <li key={`${pair.from}-${pair.to}`}>
@@ -69,7 +69,7 @@ export default function HtmlSitemapPage() {
 
           {/* TIME TAB */}
           <TabsContent value="time" className="size-full overflow-auto">
-            {/* <h2 className="text-xl font-semibold mt-4 mb-2">Time Converters</h2> */}
+            <h1 className="text-xl font-semibold mt-4 mb-2">Time Converters</h1>
             <ul className="list-disc ml-6 space-y-1">
               {timePairs.map((pair) => (
                 <li key={`${pair.from}-${pair.to}`}>

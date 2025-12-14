@@ -17,9 +17,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Base URL: use env var if available (set NEXT_PUBLIC_SITE_URL in Vercel), otherwise fallback.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://unitlab.org";
-const SITE_NAME = "UnitConvert — UnitLab";
+const SITE_NAME = "All Unit Converters Online – Free & Simple | UnitLab";
 const DESCRIPTION =
   "UnitConvert — fast, accurate unit conversions (length, area, time, weight, volume, and more). Instant updates and 100+ units supported.";
 
@@ -105,6 +104,12 @@ export default function RootLayout({
   return (
     <html lang="en" title="Unit Converter">
       <head>
+        <Script
+          id="adsense"
+          strategy="afterInteractive"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7211777208376091`}
+          crossOrigin="anonymous"
+        />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7211777208376091"

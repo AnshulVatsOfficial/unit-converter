@@ -49,7 +49,7 @@ export default function Home() {
           >
             <div className="max-w-[50rem] mx-auto p-4">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-semibold">{title} converter</h2>
+                <h1 className="text-xl font-semibold">{title} converter</h1>
                 <Link href={canonical} prefetch className="text-sm underline">
                   View full {title} converter page
                 </Link>

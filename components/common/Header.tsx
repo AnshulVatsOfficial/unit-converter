@@ -16,8 +16,8 @@ export function Header() {
         <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
           <Calculator className="h-5 w-5 text-primary" />
         </div>
-        <span className="font-semibold text-lg tracking-tight">
-          Unit<span className="text-primary">lab</span>
+        <span className="font-bold text-lg tracking-tight text-primary">
+          Unit<span className="text-primary/70">lab</span>
         </span>
       </div>
     </header>
