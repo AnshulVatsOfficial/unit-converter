@@ -105,16 +105,30 @@ export default function RootLayout({
     <html lang="en" title="Unit Converter">
       <head>
         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3N8MLCN4DT"
+          strategy="afterInteractive"
+        />
+
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3N8MLCN4DT', {
+          page_path: window.location.pathname,
+        });
+      `,
+          }}
+        />
+        <Script
           id="adsense"
           strategy="afterInteractive"
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7211777208376091`}
           crossOrigin="anonymous"
         />
-        {/* <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7211777208376091"
-          crossOrigin="anonymous"
-        ></script> */}
         <meta
           name="google-adsense-account"
           content="ca-pub-7211777208376091"
