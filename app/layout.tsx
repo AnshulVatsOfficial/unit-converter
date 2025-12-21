@@ -129,6 +129,33 @@ export default function RootLayout({
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7211777208376091`}
           crossOrigin="anonymous"
         />
+        <Script
+          src="https://cmp.gatekeeperconsent.com/min.js"
+          data-cfasync="false"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://the.gatekeeperconsent.com/cmp.min.js"
+          data-cfasync="false"
+          strategy="beforeInteractive"
+        />
+        {/* Ezoic script */}
+        <Script
+          src="https://www.ezojs.com/ezoic/sa.min.js"
+          strategy="afterInteractive"
+          async
+        />
+        {/* Ezoic global config */}
+        <Script
+          id="ezoic-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+    `,
+          }}
+        />
         <meta
           name="google-adsense-account"
           content="ca-pub-7211777208376091"
