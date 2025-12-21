@@ -105,6 +105,23 @@ export default function RootLayout({
     <html lang="en" title="Unit Converter">
       <head>
         <Script
+          id="al5sm-zone-10356647"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+      (function () {
+        var target = document.body || document.documentElement;
+        if (!target) return;
+
+        var s = document.createElement('script');
+        s.dataset.zone = '10356647';
+        s.src = 'https://al5sm.com/tag.min.js';
+        target.appendChild(s);
+      })();
+    `,
+          }}
+        />
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-3N8MLCN4DT"
           strategy="afterInteractive"
         />
