@@ -104,6 +104,20 @@ export default async function LengthConverterPage({
               strategy="afterInteractive"
             />
           </div>
+          <div id="ezoic-pub-ad-placeholder-101"></div>
+          <Script
+            id="ezoic-show-ads-101"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+      if (window.ezstandalone && ezstandalone.cmd) {
+        ezstandalone.cmd.push(function () {
+          ezstandalone.showAds(101);
+        });
+      }
+    `,
+            }}
+          />
         </div>
 
         {/* --- MAIN CONTENT --- */}
@@ -130,7 +144,6 @@ export default async function LengthConverterPage({
         {/* --- RIGHT AD (fixed width container) --- */}
         <div className="hidden lg:flex flex-col ml-6 w-[160px]">
           <div className="ad-container">
-            {/* <AdUnit slot="2907738439" /> */}
             <Script
               async
               data-cfasync="false"

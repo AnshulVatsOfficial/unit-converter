@@ -107,6 +107,20 @@ export default function Home() {
               src="https://pl28256669.effectivegatecpm.com/04/11/9a/04119ab3cbd57d8ec09916327552a7d2.js"
               strategy="afterInteractive"
             />
+            <div id="ezoic-pub-ad-placeholder-101"></div>
+            <Script
+              id="ezoic-show-ads-101"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+      if (window.ezstandalone && ezstandalone.cmd) {
+        ezstandalone.cmd.push(function () {
+          ezstandalone.showAds(101);
+        });
+      }
+    `,
+              }}
+            />
           </div>
         </div>
 
