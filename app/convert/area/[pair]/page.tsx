@@ -6,6 +6,8 @@ import AreaConverter from "@/components/converters/area/Area";
 import { notFound } from "next/navigation";
 import { normalizeSlug } from "@/lib/slugAliases";
 import { prettyFromAndTo } from "@/lib/utils";
+import AdsterraNative from "@/components/ads/AdsterraNative";
+import AdsterraBanner728 from "@/components/ads/AdsterraBanner728";
 
 type Params = { pair: string };
 
@@ -78,10 +80,11 @@ export default async function AreaConverterPage({
             defaultValue="1"
           />
 
-          {/* --- BOTTOM AD --- */}
-          <div className="mt-6 flex justify-center">
-            {/* <AdUnit slot="2907738439" /> */}
-          </div>
+          {/* Inline native ad */}
+          <AdsterraNative />
+
+          {/* Desktop banner */}
+          <AdsterraBanner728 />
         </div>
       </div>
     </main>

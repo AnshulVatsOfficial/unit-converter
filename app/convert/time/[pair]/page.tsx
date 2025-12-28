@@ -7,6 +7,8 @@ import { normalizeSlug } from "@/lib/slugAliases";
 import { prettyFromAndTo } from "@/lib/utils";
 import TimeConverter from "@/components/converters/time/TimeConverter";
 import Script from "next/script";
+import AdsterraNative from "@/components/ads/AdsterraNative";
+import AdsterraBanner728 from "@/components/ads/AdsterraBanner728";
 
 type Params = { pair: string };
 
@@ -82,10 +84,11 @@ export default async function TimeConverterPage({
             defaultValue="1"
           />
 
-          {/* --- BOTTOM AD --- */}
-          <div className="mt-6 flex justify-center">
-            {/* <AdUnit slot="2907738439" /> */}
-          </div>
+          {/* Inline native ad */}
+          <AdsterraNative />
+
+          {/* Desktop banner */}
+          <AdsterraBanner728 />
         </div>
       </div>
     </main>
