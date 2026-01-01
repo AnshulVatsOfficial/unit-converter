@@ -6,6 +6,7 @@ import { Footer } from "@/components/common/Footer";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import OpenOnFirstInteraction from "@/components/ads/OpenOnFirstInteraction";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -187,6 +188,7 @@ export default function RootLayout({
 
         <main className="flex flex-col justify-between w-full min-h-screen">
           <Header />
+          <OpenOnFirstInteraction url="https://foreignabnormality.com/qpub0jkdd3?key=1008bdedede5959b1da2eadf356f19b8" />
           <section className="size-full overflow-visible">{children}</section>
           <Footer />
         </main>
