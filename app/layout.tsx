@@ -105,6 +105,13 @@ export default function RootLayout({
   return (
     <html lang="en" title="Unit Converter">
       <head>
+        {/* Richads script below */}
+        <Script
+          src="https://richinfo.co/richpartners/push/js/rp-cl-ob.js?pubid=997771&siteid=383432&niche=33"
+          strategy="afterInteractive"
+          async
+          data-cfasync="false"
+        />
         {/* Adsterra Social Bar (global, non-blocking) */}
         <Script
           id="adsterra-social-bar"
